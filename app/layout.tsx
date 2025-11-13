@@ -1,9 +1,16 @@
-export default function Home() {
+export const metadata = {
+  title: 'BloomShield',
+  description: 'Digital Content Protection Platform',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div style={{ padding: '50px', textAlign: 'center' }}>
-      <h1>🌼 BloomShield Prototype</h1>
-      <p>Digital Content Protection Platform</p>
-      <p>File upload system coming soon!</p>
-    </div>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
